@@ -73,3 +73,61 @@ export {
   TooltipContent,
   TooltipProvider,
 } from './components/tooltip'
+
+// --- New components (synced from m3-design-docs) ---
+
+export { BottomSheet } from './components/bottom-sheet'
+export type { BottomSheetProps } from './components/bottom-sheet'
+
+export { ButtonColorful } from './components/button-colorful'
+
+export { ChatInput } from './components/chat-input'
+export type { ChatInputProps } from './components/chat-input'
+
+export { Collapsible, CollapsibleTrigger, CollapsibleContent } from './components/collapsible'
+
+export { DataTable } from './components/data-table'
+export type { Column, DataTableProps } from './components/data-table'
+
+export { Divider } from './components/divider'
+export type { DividerProps } from './components/divider'
+
+export { List, ListItem, ListDivider } from './components/list'
+export type { ListItemProps } from './components/list'
+
+export {
+  Menu,
+  MenuTrigger,
+  MenuContent,
+  MenuItem,
+  MenuSeparator,
+  MenuLabel,
+  MenuCheckboxItem,
+  MenuSub,
+  MenuSubTrigger,
+  MenuSubContent,
+} from './components/menu'
+
+export { NavigationBar } from './components/navigation-bar'
+export type { NavigationBarProps, NavBarItem } from './components/navigation-bar'
+
+export { NavigationRail } from './components/navigation-rail'
+export type { NavigationRailProps, NavRailItem } from './components/navigation-rail'
+
+export { Pagination } from './components/pagination'
+export type { PaginationProps } from './components/pagination'
+
+export { SearchBar } from './components/search-bar'
+export type { SearchBarProps } from './components/search-bar'
+
+export { Stepper, Step, useStepper } from './components/stepper'
+export type { StepProps, StepperProps, StepItem } from './components/stepper'
+
+export { Tag, tagVariants } from './components/tag'
+export type { TagProps } from './components/tag'
+
+export { TopAppBar } from './components/top-app-bar'
+export type { TopAppBarProps } from './components/top-app-bar'
+
+// Hooks
+export { useClickOutside } from './lib/use-click-outside'
