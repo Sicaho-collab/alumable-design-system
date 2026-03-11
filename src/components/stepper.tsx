@@ -433,15 +433,15 @@ type VerticalStepProps = StepSharedProps & {
 const verticalStepVariants = cva(
   [
     'flex flex-col relative transition-all duration-200',
-    'data-[completed=true]:[&:not(:last-child)]:after:bg-primary',
-    'data-[invalid=true]:[&:not(:last-child)]:after:bg-destructive',
+    'data-[completed=true]:[&:not(:last-child)]:after:bg-m3-primary',
+    'data-[invalid=true]:[&:not(:last-child)]:after:bg-m3-error',
   ],
   {
     variants: {
       variant: {
         circle: cn(
           '[&:not(:last-child)]:gap-[var(--step-gap)] [&:not(:last-child)]:pb-[var(--step-gap)]',
-          '[&:not(:last-child)]:after:bg-border [&:not(:last-child)]:after:w-[2px] [&:not(:last-child)]:after:content-[\'\']',
+          '[&:not(:last-child)]:after:bg-m3-outline-variant [&:not(:last-child)]:after:w-[2px] [&:not(:last-child)]:after:content-[\'\']',
           '[&:not(:last-child)]:after:inset-x-[calc(var(--step-icon-size)/2)]',
           '[&:not(:last-child)]:after:absolute',
           '[&:not(:last-child)]:after:top-[calc(var(--step-icon-size)+var(--step-gap))]',
@@ -557,7 +557,7 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
             'stepper__vertical-step-container',
             'flex items-center',
             variant === 'line'
-            && 'data-[active=true]:border-primary border-s-[3px] py-2 ps-3',
+            && 'data-[active=true]:border-m3-primary border-m3-outline-variant border-s-[3px] py-2 ps-3',
             styles?.['vertical-step-container'],
           )}
         >
@@ -645,15 +645,15 @@ const HorizontalStep = React.forwardRef<HTMLDivElement, StepSharedProps>(
           'relative flex items-center transition-all duration-200',
           '[&:not(:last-child)]:flex-1',
           '[&:not(:last-child)]:after:transition-all [&:not(:last-child)]:after:duration-200',
-          '[&:not(:last-child)]:after:bg-border [&:not(:last-child)]:after:h-[2px] [&:not(:last-child)]:after:content-[\'\']',
-          'data-[completed=true]:[&:not(:last-child)]:after:bg-primary',
-          'data-[invalid=true]:[&:not(:last-child)]:after:bg-destructive',
+          '[&:not(:last-child)]:after:bg-m3-outline-variant [&:not(:last-child)]:after:h-[2px] [&:not(:last-child)]:after:content-[\'\']',
+          'data-[completed=true]:[&:not(:last-child)]:after:bg-m3-primary',
+          'data-[invalid=true]:[&:not(:last-child)]:after:bg-m3-error',
           variant === 'circle-alt'
           && 'flex-1 flex-col justify-start [&:not(:last-child)]:after:relative [&:not(:last-child)]:after:end-[50%] [&:not(:last-child)]:after:start-[50%] [&:not(:last-child)]:after:top-[calc(var(--step-icon-size)/2)] [&:not(:last-child)]:after:-order-1 [&:not(:last-child)]:after:w-[calc((100%-var(--step-icon-size))-(var(--step-gap)))]',
           variant === 'circle'
           && '[&:not(:last-child)]:after:me-[var(--step-gap)] [&:not(:last-child)]:after:ms-[var(--step-gap)] [&:not(:last-child)]:after:flex-1',
           variant === 'line'
-          && 'data-[active=true]:border-primary flex-1 flex-col border-t-[3px]',
+          && 'data-[active=true]:border-m3-primary border-m3-outline-variant flex-1 flex-col border-t-[3px]',
           styles?.['horizontal-step'],
         )}
         data-optional={steps[index || 0]?.optional}
@@ -728,18 +728,24 @@ function StepButtonContainer({
     return null
 
   return (
-    <Button
-      variant="text"
+    <div
+      role="button"
       tabIndex={currentStepClickable ? 0 : -1}
       className={cn(
         'stepper__step-button-container',
-        'pointer-events-none rounded-full p-0',
+        'pointer-events-none rounded-full',
         'size-[var(--step-icon-size)]',
-        'flex items-center justify-center rounded-full border-2',
-        'data-[clickable=true]:pointer-events-auto',
-        'data-[active=true]:bg-primary data-[active=true]:border-primary data-[active=true]:text-primary-foreground',
-        'data-[current=true]:border-primary data-[current=true]:bg-secondary',
-        'data-[invalid=true]:bg-destructive data-[invalid=true]:border-destructive data-[invalid=true]:text-destructive-foreground',
+        'flex items-center justify-center shrink-0',
+        'transition-all duration-200',
+        'data-[clickable=true]:pointer-events-auto data-[clickable=true]:cursor-pointer',
+        // Future step (default): no border, light grey background
+        'bg-m3-surface-container-high text-m3-on-surface-variant',
+        // Completed step: filled primary
+        isCompletedStep && 'bg-m3-primary text-m3-on-primary',
+        // Current step: lighter purple background with primary purple border
+        isCurrentStep && !isError && 'border-2 border-m3-primary bg-m3-primary-container text-m3-on-primary-container',
+        // Error state
+        isError && (isCurrentStep || isCompletedStep) && 'bg-m3-error text-m3-on-error',
         styles?.['step-button-container'],
       )}
       aria-current={isCurrentStep ? 'step' : undefined}
@@ -750,7 +756,7 @@ function StepButtonContainer({
       data-loading={isLoading && (isCurrentStep || isCompletedStep)}
     >
       {children}
-    </Button>
+    </div>
   )
 }
 
@@ -927,7 +933,7 @@ function StepLabel({
           aria-current={isCurrentStep ? 'step' : undefined}
           className={cn(
             'stepper__step-label-container',
-            'flex flex-col',
+            'flex flex-col transition-all duration-200',
             variant !== 'line' ? 'ms-2' : orientation === 'horizontal' && 'my-2',
             variant === 'circle-alt' && 'text-center',
             variant === 'circle-alt' && orientation === 'horizontal' && 'ms-0',
@@ -943,6 +949,7 @@ function StepLabel({
               className={cn(
                 'stepper__step-label',
                 labelVariants({ size }),
+                isCurrentStep ? 'text-m3-primary font-semibold' : 'text-m3-on-surface',
                 styles?.['step-label'],
               )}
             >
@@ -953,7 +960,7 @@ function StepLabel({
             <span
               className={cn(
                 'stepper__step-description',
-                'text-muted-foreground',
+                'text-m3-on-surface-variant',
                 descriptionVariants({ size }),
                 styles?.['step-description'],
               )}

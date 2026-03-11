@@ -123,6 +123,9 @@ export type { SearchBarProps } from './components/search-bar'
 export { Stepper, Step, useStepper } from './components/stepper'
 export type { StepProps, StepperProps, StepItem } from './components/stepper'
 
+export { default as M3Stepper, M3Stepper as M3StepperNamed } from './components/m3-stepper'
+export type { M3StepperProps, M3StepperStep } from './components/m3-stepper'
+
 export { Tag, tagVariants } from './components/tag'
 export type { TagProps } from './components/tag'
 
