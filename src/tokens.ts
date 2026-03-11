@@ -83,7 +83,7 @@ export const m3Spacing = {
 } as const
 
 export const m3Typography = {
-  fontSans: "'Roboto', system-ui, -apple-system, sans-serif",
+  fontSans: "'Instrument Sans', system-ui, -apple-system, sans-serif",
 } as const
 
 export type M3Colors = typeof m3Colors

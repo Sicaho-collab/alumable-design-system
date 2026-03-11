@@ -1,6 +1,6 @@
 {
   "name": "@sicaho-collab/m3-design-system",
-  "version": "0.4.5",
+  "version": "0.4.10",
   "description": "Material 3 Design System - React component library with M3 design tokens",
   "type": "module",
   "main": "./dist/index.cjs",

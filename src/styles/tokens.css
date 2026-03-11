@@ -57,7 +57,7 @@
   --shadow-m3-5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
 
   /* -- Typography -- */
-  --font-sans: 'Roboto', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Instrument Sans', system-ui, -apple-system, sans-serif;
 
   /* -- Border Radius (Shape) -- */
   --radius-m3-none: 0px;
