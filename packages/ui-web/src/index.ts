@@ -1,12 +1,12 @@
-// Design Tokens (JS/TS)
+// Design Tokens (re-export from design-tokens package)
 export {
   m3Colors,
   m3Shadows,
   m3Radius,
   m3Spacing,
   m3Typography,
-} from './tokens'
-export type { M3Colors, M3Shadows, M3Radius, M3Spacing } from './tokens'
+} from '@alumable/design-tokens'
+export type { M3Colors, M3Shadows, M3Radius, M3Spacing } from '@alumable/design-tokens'
 
 // Utility
 export { cn } from './lib/utils'
@@ -74,8 +74,6 @@ export {
   TooltipProvider,
 } from './components/tooltip'
 
-// --- New components (synced from m3-design-docs) ---
-
 export { BottomSheet } from './components/bottom-sheet'
 export type { BottomSheetProps } from './components/bottom-sheet'
 
@@ -123,6 +121,9 @@ export type { SearchBarProps } from './components/search-bar'
 export { Stepper, Step, useStepper } from './components/stepper'
 export type { StepProps, StepperProps, StepItem } from './components/stepper'
 
+export { DateRangePicker } from './components/date-range-picker'
+export type { DateRangePickerProps } from './components/date-range-picker'
+
 export { default as M3Stepper, M3Stepper as M3StepperNamed } from './components/m3-stepper'
 export type { M3StepperProps, M3StepperStep } from './components/m3-stepper'
 
@@ -135,8 +136,7 @@ export type { TopAppBarProps } from './components/top-app-bar'
 // Hooks
 export { useClickOutside } from './lib/use-click-outside'
 
-// --- Custom / Alumable components (converted to M3 tokens) ---
-
+// Custom / Alumable components
 export { Button as ButtonAlt } from './components/button-1'
 export type { ButtonProps as ButtonAltProps } from './components/button-1'
 
