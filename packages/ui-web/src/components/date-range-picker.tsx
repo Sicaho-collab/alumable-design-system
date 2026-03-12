@@ -216,7 +216,7 @@ export const DateRangePicker = React.forwardRef<HTMLDivElement, DateRangePickerP
           <label className="text-xs font-medium text-m3-on-surface-variant mb-1 block">
             Start date
           </label>
-          <div className="flex items-center gap-2 px-3 py-2.5 rounded-m3-sm border border-m3-outline bg-m3-surface transition-all duration-200 hover:border-m3-primary/50">
+          <div className="flex items-center gap-2 px-3 py-2.5 rounded-m3-sm border border-m3-outline-variant/60 shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_16px_rgba(0,0,0,0.04)] bg-m3-surface transition-all duration-200 hover:border-m3-primary/50">
             <Calendar className="w-4 h-4 text-m3-on-surface-variant shrink-0" />
             {startDate ? (
               <span className="text-sm font-medium text-m3-primary bg-m3-primary/10 px-3 py-1 rounded-m3-sm">
@@ -233,7 +233,7 @@ export const DateRangePicker = React.forwardRef<HTMLDivElement, DateRangePickerP
           <label className="text-xs font-medium text-m3-on-surface-variant mb-1 block">
             End date
           </label>
-          <div className="flex items-center gap-2 px-3 py-2.5 rounded-m3-sm border border-m3-outline bg-m3-surface transition-all duration-200 hover:border-m3-primary/50">
+          <div className="flex items-center gap-2 px-3 py-2.5 rounded-m3-sm border border-m3-outline-variant/60 shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_16px_rgba(0,0,0,0.04)] bg-m3-surface transition-all duration-200 hover:border-m3-primary/50">
             <Calendar className="w-4 h-4 text-m3-on-surface-variant shrink-0" />
             {endDate ? (
               <span className="text-sm font-medium text-m3-primary bg-m3-primary/10 px-3 py-1 rounded-m3-sm">
@@ -264,7 +264,7 @@ export const DateRangePicker = React.forwardRef<HTMLDivElement, DateRangePickerP
     // ─── Card mode ────────────────────────────────────────────────────
 
     return (
-      <Card ref={ref} variant="outlined" className={cn('w-full max-w-3xl shadow-lg border-m3-outline-variant/50 bg-m3-surface/80 backdrop-blur-sm', className)}>
+      <Card ref={ref} variant="outlined" className={cn('w-full max-w-3xl shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_16px_rgba(0,0,0,0.04)] border-m3-outline-variant/60 bg-m3-surface/80 backdrop-blur-sm', className)}>
         <CardHeader>
           <div className="flex items-center gap-3">
             <div className="flex items-center justify-center w-10 h-10 rounded-m3-full bg-m3-primary/10">
