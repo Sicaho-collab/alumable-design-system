@@ -8,7 +8,8 @@ export default defineConfig({
   dts: { resolve: ['@alumable/design-tokens'] },
   sourcemap: true,
   clean: true,
-  external: ['react', 'react-dom', 'tailwindcss'],
+  external: ['react', 'react-dom', 'react/jsx-runtime', 'tailwindcss', /^@radix-ui\//],
+  noExternal: ['class-variance-authority', 'clsx', 'tailwind-merge'],
   treeshake: true,
   splitting: false,
   async onSuccess() {

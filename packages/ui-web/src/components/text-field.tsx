@@ -34,7 +34,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
   (
     {
       className,
-      variant,
+      variant = 'filled',
       label,
       supportingText,
       error,
@@ -42,7 +42,9 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
       leadingIcon,
       trailingIcon,
       multiline,
-      rows,
+      rows = 4,
+      disabled,
+      placeholder,
       ...props
     },
     ref
@@ -53,53 +55,57 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
 
     return (
       <div className={cn(textFieldVariants({ variant }), className)}>
+        {label && (
+          <label
+            htmlFor={inputId}
+            className={cn(
+              'block mb-1.5 text-sm text-m3-on-surface-variant',
+              error && 'text-m3-error'
+            )}
+          >
+            {label}
+          </label>
+        )}
         <div
           className={cn(
-            'relative flex items-center',
+            'relative flex',
+            multiline ? 'items-start' : 'items-center',
             variant === 'filled' &&
               'bg-m3-surface-container-highest rounded-t-m3-xs border-b-2 border-m3-on-surface-variant focus-within:border-m3-primary',
             variant === 'outlined' &&
               'border border-m3-outline rounded-m3-xs focus-within:border-2 focus-within:border-m3-primary',
-            error && 'border-m3-error focus-within:border-m3-error'
+            error && 'border-m3-error focus-within:border-m3-error',
+            disabled && 'opacity-38 pointer-events-none border-m3-on-surface/12'
           )}
         >
           {leadingIcon && (
-            <span className="pl-3 text-m3-on-surface-variant [&_svg]:size-5">
+            <span className={cn(
+              'pl-3 text-m3-on-surface-variant [&_svg]:size-5',
+              multiline && 'pt-3'
+            )}>
               {leadingIcon}
             </span>
           )}
-          <div className="relative flex-1 min-w-0">
-            <InputComp
-              ref={ref as any}
-              id={inputId}
-              aria-describedby={supportingText || errorText ? supportId : undefined}
-              aria-invalid={error}
-              {...(multiline ? { rows } : {})}
-              className={cn(
-                'peer w-full bg-transparent outline-none text-m3-on-surface text-base px-4 pt-4 pb-1 placeholder-transparent',
-                multiline ? 'min-h-14 resize-y' : 'h-14',
-                leadingIcon && 'pl-2',
-                trailingIcon && 'pr-2'
-              )}
-              placeholder={label}
-              {...(props as any)}
-            />
-            {label && (
-              <label
-                htmlFor={inputId}
-                className={cn(
-                  'absolute left-4 top-1/2 -translate-y-1/2 text-m3-on-surface-variant text-base transition-all duration-200 pointer-events-none',
-                  'peer-focus:top-2 peer-focus:translate-y-0 peer-focus:text-xs peer-focus:text-m3-primary',
-                  'peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:text-xs',
-                  leadingIcon && 'left-2',
-                  error && 'peer-focus:text-m3-error'
-                )}
-              >
-                {label}
-              </label>
+          <InputComp
+            ref={ref as any}
+            id={inputId}
+            disabled={disabled}
+            aria-describedby={supportingText || errorText ? supportId : undefined}
+            aria-invalid={error}
+            {...(multiline ? { rows } : {})}
+            placeholder={placeholder}
+            className={cn(
+              'w-full bg-transparent outline-none text-m3-on-surface text-base placeholder-m3-on-surface-variant/60',
+              multiline
+                ? 'min-h-14 resize-y leading-relaxed px-4 py-3'
+                : 'h-14 px-4',
+              leadingIcon && 'pl-2',
+              trailingIcon && 'pr-2',
+              disabled && 'text-m3-on-surface/38 cursor-not-allowed'
             )}
-          </div>
-          {trailingIcon && (
+            {...(props as any)}
+          />
+          {!multiline && trailingIcon && (
             <span className="pr-3 text-m3-on-surface-variant [&_svg]:size-5">
               {trailingIcon}
             </span>

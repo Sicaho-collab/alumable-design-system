@@ -11,3 +11,6 @@ export type { M3Colors, M3Shadows, M3Radius, M3Spacing } from '@alumable/design-
 // Mobile components — add exports here as components are created
 export { NavigationBar } from './components/navigation-bar'
 export type { NavigationBarProps, NavBarItem } from './components/navigation-bar'
+
+export { TextField } from './components/text-field'
+export type { TextFieldProps } from './components/text-field'
