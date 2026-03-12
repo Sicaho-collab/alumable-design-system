@@ -1,6 +1,6 @@
 {
   "name": "@sicaho-collab/ui-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Alumable web components (React + Tailwind + M3 tokens)",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -19,7 +19,9 @@
     },
     "./styles": "./dist/styles/tokens.css"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "prepublishOnly": "npm run build"
