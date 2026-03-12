@@ -1,5 +1,5 @@
 {
-  "name": "@alumable/design-tokens",
+  "name": "@sicaho-collab/design-tokens",
   "version": "1.0.0",
   "description": "Shared M3 design tokens for web and mobile",
   "type": "module",
@@ -24,6 +24,14 @@
     "prepublishOnly": "npm run build"
   },
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sicaho-collab/alumable-design-system.git",
+    "directory": "packages/design-tokens"
+  },
   "devDependencies": {
     "tsup": "^8.0.0",
     "typescript": "~5.9.3"

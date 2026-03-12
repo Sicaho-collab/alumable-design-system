@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { View, Text, Pressable, StyleSheet } from 'react-native'
-import { m3Colors, m3Spacing, m3Radius } from '@alumable/design-tokens'
+import { m3Colors, m3Spacing, m3Radius } from '@sicaho-collab/design-tokens'
 
 export interface NavBarItem {
   label: string

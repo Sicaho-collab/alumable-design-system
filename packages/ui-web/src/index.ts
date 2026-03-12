@@ -5,8 +5,8 @@ export {
   m3Radius,
   m3Spacing,
   m3Typography,
-} from '@alumable/design-tokens'
-export type { M3Colors, M3Shadows, M3Radius, M3Spacing } from '@alumable/design-tokens'
+} from '@sicaho-collab/design-tokens'
+export type { M3Colors, M3Shadows, M3Radius, M3Spacing } from '@sicaho-collab/design-tokens'
 
 // Utility
 export { cn } from './lib/utils'

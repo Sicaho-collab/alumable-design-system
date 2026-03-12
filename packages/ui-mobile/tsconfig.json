@@ -13,7 +13,7 @@
     "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
-      "@alumable/design-tokens": ["../design-tokens/src"]
+      "@sicaho-collab/design-tokens": ["../design-tokens/src"]
     }
   },
   "include": ["src"],

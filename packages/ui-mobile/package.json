@@ -1,5 +1,5 @@
 {
-  "name": "@alumable/ui-mobile",
+  "name": "@sicaho-collab/ui-mobile",
   "version": "1.0.0",
   "description": "Alumable mobile components (React Native + StyleSheet + M3 tokens)",
   "type": "module",
@@ -24,8 +24,16 @@
     "prepublishOnly": "npm run build"
   },
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sicaho-collab/alumable-design-system.git",
+    "directory": "packages/ui-mobile"
+  },
   "dependencies": {
-    "@alumable/design-tokens": "^1.0.0"
+    "@sicaho-collab/design-tokens": "^1.0.0"
   },
   "peerDependencies": {
     "react": ">=18.0.0",

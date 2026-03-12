@@ -7,7 +7,7 @@ import {
   type TextInputProps,
   type ViewStyle,
 } from 'react-native'
-import { m3Colors, m3Radius, m3Spacing } from '@alumable/design-tokens'
+import { m3Colors, m3Radius, m3Spacing } from '@sicaho-collab/design-tokens'
 
 export interface TextFieldProps extends Omit<TextInputProps, 'style'> {
   /** Label text displayed above the field */

@@ -5,7 +5,7 @@ import { resolve } from 'path'
 export default defineConfig({
   entry: ['src/index.ts'],
   format: ['esm', 'cjs'],
-  dts: { resolve: ['@alumable/design-tokens'] },
+  dts: { resolve: ['@sicaho-collab/design-tokens'] },
   sourcemap: true,
   clean: true,
   external: ['react', 'react-dom', 'react/jsx-runtime', 'tailwindcss', /^@radix-ui\//],
