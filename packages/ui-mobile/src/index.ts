@@ -14,3 +14,6 @@ export type { NavigationBarProps, NavBarItem } from './components/navigation-bar
 
 export { TextField } from './components/text-field'
 export type { TextFieldProps } from './components/text-field'
+
+export { VerticalNavStepper } from './components/vertical-nav-stepper'
+export type { VerticalNavStepperProps, VerticalNavStep } from './components/vertical-nav-stepper'

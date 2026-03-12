@@ -1,6 +1,6 @@
 {
   "name": "@sicaho-collab/ui-web",
-  "version": "1.0.1",
+  "version": "1.0.12",
   "description": "Alumable web components (React + Tailwind + M3 tokens)",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -51,6 +51,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "framer-motion": "^11.0.0",
     "date-fns-tz": "^3.2.0",
     "lucide-react": "^0.575.0",
     "tailwind-merge": "^3.5.0"

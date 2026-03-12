@@ -15,6 +15,9 @@ export { cn } from './lib/utils'
 export { Button, buttonVariants } from './components/button'
 export type { ButtonProps } from './components/button'
 
+export { Alert, alertVariants } from './components/alert'
+export type { AlertProps } from './components/alert'
+
 export { Badge, badgeVariants } from './components/badge'
 export type { BadgeProps } from './components/badge'
 
@@ -153,3 +156,6 @@ export { Select } from './components/select-1'
 export type { Option as SelectOption } from './components/select-1'
 
 export { Spinner } from './components/spinner-1'
+
+export { VerticalNavStepper } from './components/vertical-nav-stepper'
+export type { VerticalNavStepperProps, VerticalNavStep } from './components/vertical-nav-stepper'
