@@ -1,6 +1,6 @@
 {
   "name": "@sicaho-collab/ui-mobile",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Alumable mobile components (React Native + StyleSheet + M3 tokens)",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -18,7 +18,9 @@
       }
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "prepublishOnly": "npm run build"
