@@ -37,10 +37,10 @@ export function NavigationBar({ items, activeIndex, onSelect, className }: Navig
               <div
                 className={cn(
                   'absolute inset-0 -inset-x-4 rounded-m3-full transition-all duration-200',
-                  active ? 'bg-m3-secondary-container' : 'group-hover:bg-m3-on-surface/8'
+                  active ? 'bg-m3-primary-container' : 'group-hover:bg-m3-on-surface/8'
                 )}
               />
-              <span className={cn('relative z-10 [&_svg]:size-6', active ? 'text-m3-on-secondary-container' : 'text-m3-on-surface-variant')}>
+              <span className={cn('relative z-10 [&_svg]:size-6', active ? 'text-m3-on-primary-container' : 'text-m3-on-surface-variant')}>
                 {active && item.activeIcon ? item.activeIcon : item.icon}
               </span>
               {item.badge !== undefined && (

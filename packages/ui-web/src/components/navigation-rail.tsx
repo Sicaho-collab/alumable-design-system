@@ -126,7 +126,7 @@ export function NavigationRail({
                   className={cn(
                     'absolute inset-0 rounded-m3-full transition-all duration-200',
                     !active && 'group-hover:bg-m3-on-surface/8 group-active:bg-m3-on-surface/12',
-                    active && 'bg-m3-secondary-container group-hover:bg-m3-secondary-container/80 group-active:bg-m3-secondary-container/70',
+                    active && 'bg-m3-primary-container group-hover:bg-m3-primary-container/80 group-active:bg-m3-primary-container/70',
                   )}
                 />
               )}
@@ -139,7 +139,7 @@ export function NavigationRail({
                     className={cn(
                       'absolute inset-0 rounded-m3-full transition-all duration-200',
                       !active && 'group-hover:bg-m3-on-surface/8 group-active:bg-m3-on-surface/12',
-                      active && 'group-hover:bg-m3-on-secondary-container/8 group-active:bg-m3-on-secondary-container/12',
+                      active && 'group-hover:bg-m3-on-primary-container/8 group-active:bg-m3-on-primary-container/12',
                     )}
                   />
                 )}
@@ -148,7 +148,7 @@ export function NavigationRail({
                   <div
                     className={cn(
                       'absolute inset-0 rounded-m3-full transition-all duration-300 ease-out',
-                      active ? 'bg-m3-secondary-container scale-100 opacity-100' : 'scale-75 opacity-0',
+                      active ? 'bg-m3-primary-container scale-100 opacity-100' : 'scale-75 opacity-0',
                     )}
                   />
                 )}
@@ -156,7 +156,7 @@ export function NavigationRail({
                 <span
                   className={cn(
                     'relative z-10 [&_svg]:size-6 transition-colors duration-200',
-                    active ? 'text-m3-on-secondary-container' : 'text-m3-on-surface-variant',
+                    active ? 'text-m3-on-primary-container' : 'text-m3-on-surface-variant',
                   )}
                 >
                   {active && item.activeIcon ? item.activeIcon : item.icon}
@@ -181,7 +181,7 @@ export function NavigationRail({
                 <span
                   className={cn(
                     'relative z-10 text-sm whitespace-nowrap transition-colors duration-200 overflow-hidden',
-                    active ? 'font-semibold text-m3-on-secondary-container' : 'font-medium text-m3-on-surface-variant',
+                    active ? 'font-semibold text-m3-on-primary-container' : 'font-medium text-m3-on-surface-variant',
                   )}
                 >
                   {item.label}

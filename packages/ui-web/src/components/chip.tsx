@@ -11,7 +11,7 @@ const chipVariants = cva(
         assist:
           'border border-m3-outline text-m3-on-surface hover:bg-m3-on-surface/8 h-8 px-4 text-sm',
         filter:
-          'border border-m3-outline text-m3-on-surface-variant hover:bg-m3-on-surface/8 h-8 px-4 text-sm data-[selected=true]:bg-m3-secondary-container data-[selected=true]:text-m3-on-secondary-container data-[selected=true]:border-transparent',
+          'border border-m3-outline text-m3-on-surface-variant hover:bg-m3-on-surface/8 h-8 px-4 text-sm data-[selected=true]:bg-m3-primary-container data-[selected=true]:text-m3-on-primary-container data-[selected=true]:border-transparent',
         input:
           'border border-m3-outline text-m3-on-surface-variant hover:bg-m3-on-surface/8 h-8 pl-4 pr-2 text-sm',
         suggestion:

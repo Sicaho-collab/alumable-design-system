@@ -180,18 +180,16 @@ export const DateRangePicker = React.forwardRef<HTMLDivElement, DateRangePickerP
                 type="button"
                 onClick={() => handleDateClick(day)}
                 className={cn(
-                  'relative h-9 w-full text-sm flex items-center justify-center transition-all duration-200',
-                  // Hover scale + lift effect
-                  'hover:scale-105 active:scale-95',
+                  'relative h-9 w-full text-sm flex items-center justify-center',
                   // Default
-                  'hover:bg-m3-primary/8 rounded-m3-full',
+                  'rounded-m3-full',
                   // Outside month
                   !isCurrentMonth && 'text-m3-on-surface/30',
                   // Today indicator
                   today && !isSelected && 'font-bold text-m3-primary ring-1 ring-m3-primary/30',
                   // Selected endpoints
                   isSelected &&
-                    'bg-m3-primary text-m3-on-primary rounded-m3-full font-semibold shadow-md shadow-m3-primary/25',
+                    'bg-m3-primary text-m3-on-primary rounded-m3-full font-semibold',
                   // Range middle
                   isInRange && 'bg-m3-primary/10 text-m3-on-primary-container rounded-none',
                   // Range shape: start gets rounded-left, end gets rounded-right
@@ -216,7 +214,7 @@ export const DateRangePicker = React.forwardRef<HTMLDivElement, DateRangePickerP
           <label className="text-xs font-medium text-m3-on-surface-variant mb-1 block">
             Start date
           </label>
-          <div className="flex items-center gap-2 px-3 py-2.5 rounded-m3-sm border border-m3-outline-variant/60 shadow-soft bg-m3-surface transition-all duration-200 hover:border-m3-primary/50">
+          <div className="flex items-center gap-2 px-3 py-2.5 rounded-m3-sm border border-m3-outline-variant/60 shadow-soft bg-m3-surface">
             <Calendar className="w-4 h-4 text-m3-on-surface-variant shrink-0" />
             {startDate ? (
               <span className="text-sm font-medium text-m3-primary bg-m3-primary/10 px-3 py-1 rounded-m3-sm">
@@ -233,7 +231,7 @@ export const DateRangePicker = React.forwardRef<HTMLDivElement, DateRangePickerP
           <label className="text-xs font-medium text-m3-on-surface-variant mb-1 block">
             End date
           </label>
-          <div className="flex items-center gap-2 px-3 py-2.5 rounded-m3-sm border border-m3-outline-variant/60 shadow-soft bg-m3-surface transition-all duration-200 hover:border-m3-primary/50">
+          <div className="flex items-center gap-2 px-3 py-2.5 rounded-m3-sm border border-m3-outline-variant/60 shadow-soft bg-m3-surface">
             <Calendar className="w-4 h-4 text-m3-on-surface-variant shrink-0" />
             {endDate ? (
               <span className="text-sm font-medium text-m3-primary bg-m3-primary/10 px-3 py-1 rounded-m3-sm">

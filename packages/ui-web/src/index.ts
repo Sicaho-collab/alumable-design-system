@@ -127,6 +127,14 @@ export type { StepProps, StepperProps, StepItem } from './components/stepper'
 export { DateRangePicker } from './components/date-range-picker'
 export type { DateRangePickerProps } from './components/date-range-picker'
 
+export { DatePicker } from './components/date-picker'
+export type { DatePickerProps } from './components/date-picker'
+
+export { SimpleCalendar } from './components/simple-calendar'
+export type { SimpleCalendarProps } from './components/simple-calendar'
+
+export { Popover, PopoverTrigger, PopoverContent } from './components/popover'
+
 export { default as M3Stepper, M3Stepper as M3StepperNamed } from './components/m3-stepper'
 export type { M3StepperProps, M3StepperStep } from './components/m3-stepper'
 

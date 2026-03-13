@@ -117,7 +117,7 @@ function PageButton({ active, className, children, ...props }: PageButtonProps) 
       className={cn(
         'flex size-9 items-center justify-center rounded-m3-full text-sm font-medium transition-all duration-200 disabled:pointer-events-none disabled:opacity-38',
         active
-          ? 'bg-m3-secondary-container text-m3-on-secondary-container'
+          ? 'bg-m3-primary-container text-m3-on-primary-container'
           : 'text-m3-on-surface-variant hover:bg-m3-on-surface/8 hover:text-m3-on-surface',
         className
       )}

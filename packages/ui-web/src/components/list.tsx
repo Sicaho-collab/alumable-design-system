@@ -22,7 +22,7 @@ export const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
       className={cn(
         'flex items-center gap-4 px-4 min-h-[56px] py-2 transition-colors',
         interactive && !disabled && 'cursor-pointer hover:bg-m3-on-surface/8',
-        selected && 'bg-m3-secondary-container',
+        selected && 'bg-m3-primary-container',
         disabled && 'opacity-38 pointer-events-none',
         className
       )}
@@ -35,7 +35,7 @@ export const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
       )}
       <div className="flex-1 min-w-0">
         {overline && <p className="text-[11px] font-medium tracking-wider text-m3-on-surface-variant uppercase">{overline}</p>}
-        <p className={cn('text-sm text-m3-on-surface truncate', selected && 'font-medium text-m3-on-secondary-container')}>{headline}</p>
+        <p className={cn('text-sm text-m3-on-surface truncate', selected && 'font-medium text-m3-on-primary-container')}>{headline}</p>
         {supporting && <p className="text-xs text-m3-on-surface-variant mt-0.5 line-clamp-2">{supporting}</p>}
       </div>
       {trailing && (

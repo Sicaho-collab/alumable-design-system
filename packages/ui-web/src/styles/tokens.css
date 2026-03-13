@@ -9,14 +9,14 @@
   /* -- Primary -- */
   --color-m3-primary: #9A76BE;
   --color-m3-on-primary: #FFFFFF;
-  --color-m3-primary-container: #EADDFF;
-  --color-m3-on-primary-container: #21005D;
+  --color-m3-primary-container: #EDE0FF;
+  --color-m3-on-primary-container: #583D72;
 
   /* -- Secondary -- */
-  --color-m3-secondary: #625B71;
+  --color-m3-secondary: #FFA33C;
   --color-m3-on-secondary: #FFFFFF;
-  --color-m3-secondary-container: #E8DEF8;
-  --color-m3-on-secondary-container: #1D192B;
+  --color-m3-secondary-container: #FFE5C4;
+  --color-m3-on-secondary-container: #4D2800;
 
   /* -- Tertiary -- */
   --color-m3-tertiary: #7D5260;

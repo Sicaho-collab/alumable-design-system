@@ -9,7 +9,7 @@ const tagVariants = cva(
     variants: {
       variant: {
         filled: 'bg-m3-primary text-m3-on-primary',
-        tonal: 'bg-m3-secondary-container text-m3-on-secondary-container',
+        tonal: 'bg-m3-primary-container text-m3-on-primary-container',
         outlined: 'border border-m3-outline text-m3-on-surface',
         surface: 'bg-m3-surface-container-high text-m3-on-surface',
       },

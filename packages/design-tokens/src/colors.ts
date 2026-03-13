@@ -7,14 +7,14 @@ export const m3Colors = {
   // Primary
   primary: '#9A76BE',
   onPrimary: '#FFFFFF',
-  primaryContainer: '#EADDFF',
-  onPrimaryContainer: '#21005D',
+  primaryContainer: '#EDE0FF',
+  onPrimaryContainer: '#583D72',
 
   // Secondary
-  secondary: '#625B71',
+  secondary: '#FFA33C',
   onSecondary: '#FFFFFF',
-  secondaryContainer: '#E8DEF8',
-  onSecondaryContainer: '#1D192B',
+  secondaryContainer: '#FFE5C4',
+  onSecondaryContainer: '#4D2800',
 
   // Tertiary
   tertiary: '#7D5260',

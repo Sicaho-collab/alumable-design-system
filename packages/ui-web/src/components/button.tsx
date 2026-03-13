@@ -17,7 +17,7 @@ const buttonVariants = cva(
         elevated:
           'bg-m3-surface-container-low text-m3-primary shadow-m3-1 hover:shadow-m3-2 active:shadow-m3-1 rounded-m3-full',
         tonal:
-          'bg-m3-secondary-container text-m3-on-secondary-container hover:shadow-m3-1 active:shadow-none rounded-m3-full',
+          'bg-m3-primary-container text-m3-on-primary-container hover:shadow-m3-1 active:shadow-none rounded-m3-full',
         ghost:
           'text-m3-on-surface-variant hover:bg-m3-on-surface/8 active:bg-m3-on-surface/12 rounded-m3-full',
       },
